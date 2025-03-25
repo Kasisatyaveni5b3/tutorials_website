@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent {
+  
+  isMenuVisible : boolean=false;
 
+  toggleMenu() {
+    this.isMenuVisible = !this.isMenuVisible
+  }
 }
