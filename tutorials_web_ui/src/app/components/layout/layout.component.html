@@ -1,26 +1,16 @@
-
 <div>
     <mat-toolbar color="primary" class="flex items-center px-4 py-2">
-        <!-- Left Section: Buttons -->
         <div class="flex items-center space-x-4">
-            <button class="fsb" (click)="tutorials()">Tutorials</button>
-            <button class="fsb" (click)="development()">Development</button>
-            <button class="fsb" (click)="qa()">QA</button>
+            <button mat-button (click)="tutorials()">Tutorials</button>
+            <button mat-button (click)="development()">Development</button>
+            <button mat-button (click)="qa()">QA</button>
         </div>
         <div class="flex-1"></div>
-        <div class="relative">
-            <input type="text" placeholder="Search..." 
-                class="px-2 py-1 w-40 text-sm rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black bg-white">
-            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500 text-xs">
-                🔍
-            </button>
-        </div>
+        <button mat-icon-button (click)="login()">
+            <i class="fas fa-sign-in-alt"></i>
+        </button>
+        <button mat-icon-button (click)="register()">
+            <i class="fas fa-user-plus"></i>
+        </button>
     </mat-toolbar>
 </div>
-<!-- 
-<div>
-    <footer class="text-center p-1 mt-6 bg-blue-800 text-white">
-        <p>Quantela Asset Manager (QAM) v1.2.0, Copyright ©2024-2025 Quantela Inc. All rights reserved.</p>
-    </footer>
-</div> -->
-

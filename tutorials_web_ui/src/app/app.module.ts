@@ -18,7 +18,10 @@ import { LayoutComponent } from './components/layout/layout.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatTreeFlatDataSource, MatTreeFlattener, MatTreeModule} from '@angular/material/tree';
-
+import { LoginComponent } from './components/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatCardModule} from '@angular/material/card';
+import { RegisterComponent } from './components/register/register.component';
 
 
 @NgModule({
@@ -27,7 +30,9 @@ import {MatTreeFlatDataSource, MatTreeFlattener, MatTreeModule} from '@angular/m
     MainPageComponent,
     DevelopmentComponent,
     QaComponent,
-    LayoutComponent
+    LayoutComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +47,9 @@ import {MatTreeFlatDataSource, MatTreeFlattener, MatTreeModule} from '@angular/m
     MatFormFieldModule,
     MatSidenavModule,
     MatListModule,
-    MatTreeModule
+    MatTreeModule,
+    ReactiveFormsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

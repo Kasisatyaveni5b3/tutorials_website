@@ -1,0 +1,54 @@
+<div class="flex items-center justify-center">
+    <mat-dialog-content>
+        <h1>Sign up</h1>
+        <form [formGroup]="userForm">
+            <div class="flex flex-col pb-2.5">
+                <mat-label class="text-lg font-semibold">User name</mat-label>
+                <input 
+                    matInput 
+                    type="text" 
+                    placeholder="Enter username" 
+                    formControlName="username" 
+                    class="p-2 w-96 border"
+                />
+            </div>
+            <div class="flex flex-col pb-2.5">
+                <mat-label class="text-lg font-semibold">Email</mat-label>
+                <input 
+                    matInput 
+                    type="text" 
+                    placeholder="Enter email" 
+                    formControlName="email" 
+                    class="p-2 w-96 border"
+                />
+            </div>
+            <div class="relative w-64">
+                <mat-label class="text-lg font-semibold">Password</mat-label>
+                <div class="relative w-64">
+                    <input 
+                      type="{{ hide ? 'password' : 'text' }}" 
+                      placeholder="Enter Password" 
+                      formControlName="password"
+                      class="p-2 w-96 border"
+                    />
+                    <button 
+                      class="absolute inset-y-0 left-80 flex items-center text-gray-500"
+                      (click)="hide = !hide"
+                    >
+                      <mat-icon class="">{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+                    </button>
+                  </div>
+                  
+              </div>              
+        </form>
+    </mat-dialog-content>
+   
+</div>
+<div class=" flex justify-center items-center">
+    <mat-dialog-actions>
+        <button mat-raised-button color="primary" [disabled]="!userForm.valid"  type="raised">Sign up</button>
+    </mat-dialog-actions>
+</div>
+
+
+
