@@ -8,11 +8,26 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DevelopmentComponent } from './components/development/development.component';
+import { QaComponent } from './components/qa/qa.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { LayoutComponent } from './components/layout/layout.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatTreeFlatDataSource, MatTreeFlattener, MatTreeModule} from '@angular/material/tree';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainPageComponent
+    MainPageComponent,
+    DevelopmentComponent,
+    QaComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +35,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatIconModule,
     MatButtonModule,
     MatToolbarModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatInputModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatSidenavModule,
+    MatListModule,
+    MatTreeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
